@@ -1,13 +1,14 @@
-package com.example.demo
+package com.example.helloworld
 
-import org.junit.jupiter.api.Test
-import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RestController
 
-@SpringBootTest
-class DemoApplicationTests {
+@RestController
+class HelloWorldController {
 
-	@Test
-	fun contextLoads() {
-	}
-
+    @GetMapping("/hello")
+    fun hello(): String {
+        return "Hello, World!"
+    }
 }
+
